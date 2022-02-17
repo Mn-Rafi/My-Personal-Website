@@ -49,7 +49,7 @@
 
     value6=false;
   
-    if ($("#fsubject").val().match(/^[A-Za-z][A-Za-z ]*$/)) {
+    if ($("#fsubject").val().match(/^[A-Za-z][A-Za-z.0-9 ]*$/)) {
         value6 = true;
         document.getElementById("psubject").style.display="none";
     }
@@ -81,7 +81,7 @@ function messvali(){
 
   value7=false;
 
-  if ($("#fmessage").val().match(/^[A-Za-z][A-Za-z ]*$/)) {
+  if ($("#fmessage").val().match(/^[A-Za-z][A-Za-z.0-9 ]*$/)) {
       value7 = true;
       document.getElementById("pmessage").style.display="none";
   }
