@@ -109,6 +109,15 @@ function messvali(){
     
 
 }
+let a=3
+let b=5
+function numchange(){
+  if(a<b){
+    value8=true
+  }else{
+    value8=false
+  }
+}
 
 
 // $("#main-contact-form").submit((e)=>{
@@ -127,13 +136,16 @@ function messvali(){
  $("#main-contact-form").submit((e)=>{
       e.preventDefault()
       
-      if (value1==true && value6==true && value7==true && value2==true && value3==true && value4==true && value5==true ){
+      if (value1==true && value6==true && value7==true && value2==true && value3==true && value4==true && value5==true && value8==true){
+        
+        value8=false
         
         $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbxy2kfJxDrYJYk4MNsxjoCsd_m3GGP2D_SxteWBcktt3RvpriUgkBr6HrUOk_2gKwmO/exec",
+          url:"https://script.google.com/macros/s/AKfycbxKrci4Ztvqud8O3l72jwfmgDmDpr7b1aaZXESVQ_quozoo4I-4/exec",
           data:$("#main-contact-form").serialize(),
           method:"post",
           success:function (response){
+            
               alert("Form submitted successfully")
               window.location.reload()
               //window.location.href="https://google.com"
